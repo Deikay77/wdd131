@@ -1,1 +1,1 @@
-WDD 131 - BYU Idahp
+WDD 131 - BYU Idaho
