@@ -1,0 +1,11 @@
+@media screen and (min-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure img {
+        max-width: 250px;
+    }
+
+}
