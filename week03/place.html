@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ghana</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Ghana</h1>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <picture>
+                <source srcset="images/hero-large.jpg" media="(min-width:1000px)">
+                <source srcset="images/accra-medium.webp" media="(min-width:500px)">
+                <img src="images/accra-small.webp" alt="Accra city view">
+            </picture>
+
+            <div class="data">
+                <h2>Data</h2>
+
+                <p><strong>Area:</strong> 238,535 sq km</p>
+                <p><strong>Population:</strong> 33,000,000</p>
+                <p><strong>Capital:</strong> Accra</p>
+                <p><strong>Languages:</strong> English</p>
+                <p><strong>Currency:</strong> Ghanaian Cedi</p>
+                <p><strong>Time Zone:</strong> UTC</p>
+                <p><strong>Calling Code:</strong> +233</p>
+                <p><strong>Internet TLD:</strong> .gh</p>
+
+            </div>
+
+            <div class="weather">
+
+                <h2>Weather</h2>
+
+                <p>Temperature: <span id="temperature">10</span> °C</p>
+                <p>Wind Speed: <span id="windspeed">5</span> km/h</p>
+                <p>Wind Chill: <span id="windchill"></span></p>
+
+                <img src="images/weather-icon.svg" alt="weather icon" class="weather-icon">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© <span id="year"></span> Rubia Magdelena Francesco 🌺 Ghana</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+
+    </footer>
+
+</body>
+
+</html>
