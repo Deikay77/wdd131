@@ -13,7 +13,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+
 header {
     background: var(--red);
     color: white;
@@ -21,7 +21,7 @@ header {
     padding: 1rem;
 }
 
-/* HERO IMAGE */
+
 .hero {
     position: relative;
     height: fit-content;
@@ -36,8 +36,6 @@ header {
     
  }
 
-
-/* DATA CARD */
 .data {
     position: absolute;
     top: 40px;
@@ -55,7 +53,7 @@ header {
     margin: -20px -20px 10px -20px;
 }
 
-/* WEATHER CARD */
+
 .weather {
     position: absolute;
     bottom: 40px;
@@ -73,12 +71,12 @@ header {
     margin: -20px -20px 10px -20px;
 }
 
-/* MOBILE WEATHER ICON */
+
 .weather-icon {
     width: 40px;
 }
 
-/* FOOTER */
+
 footer {
     background: var(--red);
     color: white;
@@ -86,7 +84,7 @@ footer {
     padding: 1rem;
 }
 
-/* LARGE SCREEN WEATHER ICON */
+
 @media (min-width:1000px) {
 
     .weather-icon {
