@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Site plan for the TrailNest project (WDD 131)." />
+    <title>TrailNest | Site Plan</title>
+
+    <!-- Typography (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <!-- Simple logo (inline SVG) -->
+                <div class="logo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" focusable="false">
+                        <circle cx="32" cy="32" r="28"></circle>
+                        <path d="M16 40c7-6 10-18 16-18s9 12 16 18" fill="none" stroke-width="4"
+                            stroke-linecap="round" />
+                        <path d="M22 42h20" fill="none" stroke-width="4" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <div>
+                    <p class="kicker">W05 Project</p>
+                    <h1>TrailNest — Website Planning Document</h1>
+                    <p class="subtitle">A living plan used to guide design, content, and development.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Site Name -->
+        <section class="card" id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>Name:</strong> TrailNest</p>
+            <p><strong>Optional domain:</strong> trailnest-guide.com</p>
+            <p>
+                <strong>Why this name:</strong>
+                “TrailNest” suggests a home base for hikers—one place to quickly find safe, simple trail ideas,
+                check rules, and plan a weekend outing.
+            </p>
+        </section>
+
+        <!-- Site Purpose -->
+        <section class="card" id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>
+                TrailNest helps people find beginner-to-intermediate hikes in the Utah Valley / Wasatch Front area.
+                The site provides quick trail summaries (distance, difficulty, time estimate), family/dog-friendly info,
+                seasonal safety tips, and a simple form for visitors to suggest trails or report current conditions.
+            </p>
+            <ul>
+                <li>Curated trail list with key details (distance, elevation, difficulty, time).</li>
+                <li>Planning resources (packing checklist, safety reminders, “best seasons to go”).</li>
+                <li>Contact/suggestion form for trail recommendations and condition updates.</li>
+            </ul>
+        </section>
+
+        <!-- Scenarios -->
+        <section class="card" id="scenarios">
+            <h2>Scenarios</h2>
+            <ol>
+                <li>“I only have 2 hours and I’m hiking with kids—what is a short, safe hike nearby?”</li>
+                <li>“Are dogs allowed on this trail, and are there any leash rules or fees?”</li>
+                <li>“What should I pack for a spring hike when weather changes quickly?”</li>
+            </ol>
+        </section>
+
+        <!-- Color Schema -->
+        <section class="card" id="color-schema">
+            <h2>Color Schema</h2>
+            <p>These colors are applied to this document and will be reused in the final site.</p>
+
+            <div class="swatches" role="list">
+                <div class="swatch" role="listitem">
+                    <div class="chip chip-primary"></div>
+                    <div>
+                        <p><strong>Primary (Evergreen):</strong> <code>#14532D</code></p>
+                        <p>Used for headings, primary buttons, and main brand elements.</p>
+                    </div>
+                </div>
+
+                <div class="swatch" role="listitem">
+                    <div class="chip chip-secondary"></div>
+                    <div>
+                        <p><strong>Secondary (Sky):</strong> <code>#0EA5E9</code></p>
+                        <p>Used for links, icons, and supporting UI accents.</p>
+                    </div>
+                </div>
+
+                <div class="swatch" role="listitem">
+                    <div class="chip chip-accent"></div>
+                    <div>
+                        <p><strong>Accent (Trail Marker):</strong> <code>#F59E0B</code></p>
+                        <p>Used for highlights, callouts, and section markers.</p>
+                    </div>
+                </div>
+
+                <div class="swatch" role="listitem">
+                    <div class="chip chip-surface"></div>
+                    <div>
+                        <p><strong>Background/Surface:</strong> <code>#F7FAF7</code></p>
+                        <p>Used for the page background and light surfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="card" id="typography">
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Headings:</strong> Poppins (600–700)</li>
+                <li><strong>Body:</strong> Inter (400–600)</li>
+                <li><strong>Wireframes/labels:</strong> Fira Code</li>
+            </ul>
+
+            <div class="type-samples">
+                <div>
+                    <p class="label">Heading sample</p>
+                    <p class="sample-heading">Find Your Next Weekend Hike</p>
+                </div>
+                <div>
+                    <p class="label">Body sample</p>
+                    <p class="sample-body">
+                        TrailNest provides quick trail details so you can plan confidently—distance, difficulty,
+                        family/dog notes, and seasonal tips.
+                    </p>
+                </div>
+                <div>
+                    <p class="label">Monospace sample</p>
+                    <pre class="sample-mono">Example label: DISTANCE • TIME • DIFFICULTY</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wireframes -->
+        <section class="card" id="wireframes">
+            <h2>Wireframes</h2>
+            <p>
+                These wireframes represent the <strong>home page</strong> layout for mobile and desktop views.
+                (Boxes represent content blocks, not final design.)
+            </p>
+
+            <div class="wireframe-grid">
+                <figure class="wireframe">
+                    <figcaption><strong>Mobile View</strong> (narrow)</figcaption>
+                    <pre aria-label="Mobile wireframe">
++--------------------------+
+| Logo + TrailNest         |
++--------------------------+
+| Menu (hamburger)         |
++--------------------------+
+| Hero: headline + CTA     |
+| (Search or “Browse Trails”)|
++--------------------------+
+| Featured Trails (cards)  |
+| [Card] [Card] [Card]     |
++--------------------------+
+| Planning Tips (short)    |
++--------------------------+
+| Newsletter / Contact Form|
++--------------------------+
+| Footer (links/social)    |
++--------------------------+
+          </pre>
+                </figure>
+
+                <figure class="wireframe">
+                    <figcaption><strong>Desktop View</strong> (wide)</figcaption>
+                    <pre aria-label="Desktop wireframe">
++------------------------------------------------------+
+| Logo | TrailNest                          | Nav Links |
++------------------------------------------------------+
+| Hero: headline + CTA + small image/illustration      |
++-------------------------------+----------------------+
+| Featured Trails (grid of cards)| Planning Tips       |
+| [Card] [Card] [Card]          | checklist + safety   |
+| [Card] [Card] [Card]          |                      |
++------------------------------------------------------+
+| Newsletter / Contact Form (full-width)               |
++------------------------------------------------------+
+| Footer (links/contact/social)                        |
++------------------------------------------------------+
+          </pre>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Testing -->
+        <section class="card" id="testing">
+            <h2>Testing / Self Check</h2>
+            <ul>
+                <li>Validate HTML: https://validator.w3.org/</li>
+                <li>Validate CSS: https://jigsaw.w3.org/css-validator/</li>
+                <li>Lighthouse (Chrome DevTools): Accessibility, Best Practices, SEO, Performance</li>
+                <li>Color contrast check (WebAIM): https://webaim.org/resources/contrastchecker/</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><small>&copy; <span id="year"></span> TrailNest — WDD 131</small></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
