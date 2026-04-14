@@ -1,18 +1,22 @@
-const temperature = 10;
-const windspeed = 5;
-
-function calculateWindChill(temp, speed) {
-    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16);
+// Required: function that returns wind chill (one line return), Metric units
+function calculateWindChill(tempC, windKmh) {
+    return Math.round((13.12 + 0.6215 * tempC - 11.37 * (windKmh ** 0.16) + 0.3965 * tempC * (windKmh ** 0.16)) * 10) / 10;
 }
 
-let windChill = "N/A";
+document.addEventListener("DOMContentLoaded", () => {
+    // Footer requirements
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    document.querySelector("#lastModified").textContent = document.lastModified;
 
-if (temperature <= 10 && windspeed > 4.8) {
-    windChill = calculateWindChill(temperature, windspeed).toFixed(1) + " °C";
-}
+    // Static values read from HTML
+    const temp = Number(document.querySelector("#temperature").textContent);
+    const wind = Number(document.querySelector("#windspeed").textContent);
+    const output = document.querySelector("#windchill");
 
-document.getElementById("windchill").textContent = windChill;
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("lastModified").textContent = document.lastModified;
+    // Only calculate when valid (Metric): temp <= 10°C and wind > 4.8 km/h
+    if (temp <= 10 && wind > 4.8) {
+        output.textContent = `${calculateWindChill(temp, wind)} °C`;
+    } else {
+        output.textContent = "N/A";
+    }
+});

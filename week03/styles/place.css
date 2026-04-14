@@ -1,98 +1,169 @@
-:root {
-    --red: #d61a2a;
-    --green: #1e7c4f;
-    --card-bg: rgba(255, 255, 255, 0.85);
+:root{
+  /* Ghana palette (you can tweak) */
+  --red: #ce1126;
+  --yellow: #fcd116;
+  --green: #006b3f;
+
+  --page-bg: #e9f7ea;      /* light green page background like the example */
+  --ink: #0f172a;
+
+  --card-bg: rgba(255,255,255,0.85);
+  --card-border: rgba(15,23,42,0.18);
+
+  --radius: 10px;
+  --shadow: 0 10px 25px rgba(0,0,0,0.18);
+
+  --maxw: 1000px;
 }
 
-* {
-    box-sizing: border-box;
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--ink);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+/* Header + Footer like the example */
+.site-header{
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
 }
 
-
-header {
-    background: var(--red);
-    color: white;
-    text-align: center;
-    padding: 1rem;
+.site-header h1{
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: 0.5px;
 }
 
+.accent-bar{
+  height: 14px;
+  background: var(--green);
+}
 
-.hero {
-    position: relative;
-    height: fit-content;
+.site-footer{
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+.page{
+  width: min(var(--maxw), 92vw);
+  margin: 0 auto;
+  padding: 1.25rem 0 1.5rem;
+}
+
+/* HERO */
+.hero{
+  position: relative;
+  border: 6px solid rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+.hero-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cards (base) */
+.card{
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-title{
+  margin: 0;
+  padding: 0.9rem 1rem;
+  background: var(--green);
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.kv{
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.kv > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.kv dt{
+  font-weight: 700;
+}
+
+.kv dd{
+  margin: 0;
+  justify-self: start;
+}
+
+/* Weather icon shown on mobile */
+.weather-icon{
+  display: block;
+  margin: 0.75rem 1rem 0;
+}
+
+/* MOBILE layout (wireframe): image, then Data card, then Weather card */
+@media (max-width: 799px){
+  .hero{
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .data, .weather{
+    width: min(92vw, var(--maxw));
+    margin: 0 auto;
+  }
+}
+
+/* DESKTOP layout (example): overlay Data left + Weather right over the image */
+@media (min-width: 800px){
+  .hero{
+    height: min(70vh, 560px);  /* prevents huge white space / scrolling */
     overflow: hidden;
-}
+  }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    
- }
+  .hero-img{
+    height: 100%;
+    object-fit: cover;
+  }
 
-.data {
+  .data{
     position: absolute;
-    top: 40px;
-    left: 40px;
-    background: var(--card-bg);
-    padding: 20px;
-    width: 260px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+    top: 1.25rem;
+    left: 1.25rem;
+    width: min(380px, 38%);
+  }
 
-.data h2 {
-    background: var(--green);
-    color: white;
-    padding: 10px;
-    margin: -20px -20px 10px -20px;
-}
-
-
-.weather {
+  .weather{
     position: absolute;
-    bottom: 40px;
-    right: 40px;
-    background: var(--card-bg);
-    padding: 20px;
-    width: 240px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: min(360px, 36%);
+  }
 
-.weather h2 {
-    background: var(--green);
-    color: white;
-    padding: 10px;
-    margin: -20px -20px 10px -20px;
-}
+  /* REQUIRED: pseudo-element (emoticon) after Weather heading in large view */
+  .weather-title::after{
+    content: " ⛅";
+    font-size: 1.2em;
+  }
 
-
-.weather-icon {
-    width: 40px;
-}
-
-
-footer {
-    background: var(--red);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-
-@media (min-width:1000px) {
-
-    .weather-icon {
-        display: none;
-    }
-
-    .weather h2::after {
-        content: " ⛅";
-    }
-
+  /* REQUIRED: SVG icon only in mobile view */
+  .weather-icon{
+    display: none;
+  }
 }

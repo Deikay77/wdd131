@@ -1,70 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Country page for Ghana featuring key data and weather." />
     <title>Ghana</title>
 
-    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/place.js" defer></script>
-
 </head>
 
 <body>
-
-    <header>
+    <header class="site-header">
         <h1>Ghana</h1>
     </header>
 
-    <main>
+    <div class="accent-bar" aria-hidden="true"></div>
 
-        <section class="hero">
+    <main class="page">
+        <!-- HERO block -->
+        <section class="hero" aria-label="Hero image of Ghana">
+            <!-- REQUIRED: srcset method swapping WebP images -->
+            <img class="hero-img" src="images/accra-800.webp" srcset="
+          images/accra-400.webp 400w,
+          images/accra-800.webp 800w,
+          images/accra-1200.webp 1200w
+        " sizes="(max-width: 500px) 400px, (max-width: 900px) 800px, 1200px" alt="Accra city view in Ghana"
+                width="1200" height="700" loading="eager" />
 
-            <picture>
-                <source srcset="images/hero-large.jpg" media="(min-width:1000px)">
-                <source srcset="images/accra-medium.webp" media="(min-width:500px)">
-                <img src="images/accra-small.webp" alt="Accra city view">
-            </picture>
+            <!-- Desktop overlay cards / Mobile stacked cards -->
+            <section class="card data" aria-label="Ghana data">
+                <h2 class="card-title">Data</h2>
+                <dl class="kv">
+                    <div>
+                        <dt>Area</dt>
+                        <dd>238,535 sq km</dd>
+                    </div>
+                    <div>
+                        <dt>Population</dt>
+                        <dd>33,000,000</dd>
+                    </div>
+                    <div>
+                        <dt>Capital</dt>
+                        <dd>Accra</dd>
+                    </div>
+                    <div>
+                        <dt>Languages</dt>
+                        <dd>English</dd>
+                    </div>
+                    <div>
+                        <dt>Currency</dt>
+                        <dd>Ghanaian Cedi</dd>
+                    </div>
+                    <div>
+                        <dt>Time Zone</dt>
+                        <dd>UTC</dd>
+                    </div>
+                    <div>
+                        <dt>Calling Code</dt>
+                        <dd>+233</dd>
+                    </div>
+                    <div>
+                        <dt>Internet TLD</dt>
+                        <dd>.gh</dd>
+                    </div>
+                </dl>
+            </section>
 
-            <div class="data">
-                <h2>Data</h2>
+            <section class="card weather" aria-label="Ghana weather">
+                <h2 class="card-title weather-title">Weather</h2>
 
-                <p><strong>Area:</strong> 238,535 sq km</p>
-                <p><strong>Population:</strong> 33,000,000</p>
-                <p><strong>Capital:</strong> Accra</p>
-                <p><strong>Languages:</strong> English</p>
-                <p><strong>Currency:</strong> Ghanaian Cedi</p>
-                <p><strong>Time Zone:</strong> UTC</p>
-                <p><strong>Calling Code:</strong> +233</p>
-                <p><strong>Internet TLD:</strong> .gh</p>
+                <!-- SVG icon required for mobile view -->
+                <img class="weather-icon" src="images/weather-icon.svg" alt="Weather icon" width="56" height="56"
+                    loading="lazy" />
 
-            </div>
-
-            <div class="weather">
-
-                <h2>Weather</h2>
-
-                <p>Temperature: <span id="temperature">10</span> °C</p>
-                <p>Wind Speed: <span id="windspeed">5</span> km/h</p>
-                <p>Wind Chill: <span id="windchill"></span></p>
-
-                <img src="images/weather-icon.svg" alt="weather icon" class="weather-icon">
-
-            </div>
-
+                <!-- Static values (JS reads these) -->
+                <dl class="kv">
+                    <div>
+                        <dt>Temperature</dt>
+                        <dd><span id="temperature">10</span> °C</dd>
+                    </div>
+                    <div>
+                        <dt>Wind</dt>
+                        <dd><span id="windspeed">5</span> km/h</dd>
+                    </div>
+                    <div>
+                        <dt>Wind Chill</dt>
+                        <dd><span id="windchill">—</span></dd>
+                    </div>
+                </dl>
+            </section>
         </section>
-
     </main>
 
-    <footer>
-
-        <p>© <span id="year"></span> Rubia Magdelena Francesco 🌺 Ghana</p>
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Rubia Magdelena Francesco | Ghana</p>
         <p>Last Modification: <span id="lastModified"></span></p>
-
     </footer>
-
 </body>
 
 </html>
