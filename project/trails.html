@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Browse TrailNest trails with filters and save favorites." />
+    <meta name="author" content="Eugene Selorm Dei-Kumah" />
+    <title>TrailNest | Trails</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/trails.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="TrailNest home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-name">TrailNest</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="siteNav">
+                Menu
+            </button>
+
+            <nav class="site-nav" id="siteNav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="trails.html" data-nav="trails">Trails</a>
+                <a href="planning.html" data-nav="planning">Planning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="section">
+        <div class="container">
+            <h1>Browse Trails</h1>
+            <p class="lead">Filter trails and save your favorites. Favorites are stored in your browser.</p>
+
+            <section class="filters card" aria-label="Trail filters">
+                <div class="filters-grid">
+                    <label>
+                        Difficulty
+                        <select id="difficulty">
+                            <option value="all">All</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Moderate">Moderate</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Max time (hours)
+                        <select id="maxTime">
+                            <option value="all">Any</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Season
+                        <select id="season">
+                            <option value="all">All</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Fall">Fall</option>
+                            <option value="Winter">Winter</option>
+                        </select>
+                    </label>
+
+                    <label class="checkline">
+                        <input type="checkbox" id="dogOnly">
+                        Dog-friendly only
+                    </label>
+
+                    <label>
+                        Sort
+                        <select id="sortBy">
+                            <option value="name">Name</option>
+                            <option value="time">Time</option>
+                            <option value="distance">Distance</option>
+                        </select>
+                    </label>
+
+                    <button class="btn btn-outline" id="clearFilters" type="button">Clear</button>
+                </div>
+
+                <div class="filters-meta">
+                    <p id="resultsMsg" class="results-msg" aria-live="polite"></p>
+                    <p id="favoritesMsg" class="favorites-msg" aria-live="polite"></p>
+                </div>
+            </section>
+
+            <section id="trailCards" class="card-grid" aria-label="Trail results"></section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p><small>&copy; <span id="year"></span> TrailNest</small></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

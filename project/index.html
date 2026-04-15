@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="TrailNest helps you find beginner-to-intermediate hikes in Utah Valley / Wasatch Front." />
+    <meta name="author" content="Eugene Selorm Dei-Kumah" />
+    <title>TrailNest | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="TrailNest home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-name">TrailNest</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="siteNav">
+                Menu
+            </button>
+
+            <nav class="site-nav" id="siteNav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="trails.html" data-nav="trails">Trails</a>
+                <a href="planning.html" data-nav="planning">Planning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Find your next weekend hike.</h1>
+                    <p>
+                        TrailNest provides quick trail details so you can plan confidently—distance, time, difficulty,
+                        dog/family notes, and seasonal reminders for Utah Valley and the Wasatch Front.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="trails.html">Browse Trails</a>
+                        <a class="btn btn-outline" href="planning.html">Planning Tips</a>
+                    </div>
+
+                    <ul class="hero-badges" aria-label="TrailNest highlights">
+                        <li>Beginner-friendly</li>
+                        <li>Quick filters</li>
+                        <li>Save favorites</li>
+                    </ul>
+                </div>
+
+                <div class="hero-media">
+                    <!-- Replace hero.webp with your optimized image -->
+                    <img src="images/hero-1200.webp" alt="A scenic hiking trail in the mountains" width="1200" height="800">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>What you can do on TrailNest</h2>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Explore curated trails</h3>
+                        <p>Use filters like difficulty, time, and dog-friendly rules to quickly narrow down options.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Save favorites</h3>
+                        <p>Mark trails you want to revisit. Favorites are saved in your browser using localStorage.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Share conditions</h3>
+                        <p>Report trail conditions or suggest a trail. Your recent submissions can be shown on the
+                            Planning page.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2>Quick seasonal reminders</h2>
+                <div class="two-col">
+                    <div class="card">
+                        <h3>Spring</h3>
+                        <p>Expect mud and runoff. Wear traction if mornings freeze, and check stream crossings.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Summer</h3>
+                        <p>Start early. Bring more water than you think you need. Watch for lightning on exposed ridges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p><small>&copy; <span id="year"></span> TrailNest</small></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

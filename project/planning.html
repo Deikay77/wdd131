@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Packing checklist, safety reminders, and a form to suggest trails or report conditions." />
+    <meta name="author" content="Eugene Selorm Dei-Kumah" />
+    <title>TrailNest | Planning</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/planning.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="TrailNest home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-name">TrailNest</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="siteNav">
+                Menu
+            </button>
+
+            <nav class="site-nav" id="siteNav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="trails.html" data-nav="trails">Trails</a>
+                <a href="planning.html" data-nav="planning">Planning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="section">
+        <div class="container">
+            <h1>Planning & Safety</h1>
+            <p class="lead">Use this checklist and share trail suggestions or conditions with the TrailNest community.
+            </p>
+
+            <div class="two-col">
+                <section class="card">
+                    <h2>Packing checklist (quick)</h2>
+                    <ul class="checklist">
+                        <li>Water + snacks</li>
+                        <li>Layers (weather changes fast)</li>
+                        <li>Sun protection (hat, sunglasses, sunscreen)</li>
+                        <li>Charged phone + offline map</li>
+                        <li>Basic first aid</li>
+                        <li>Trash bag (pack it out)</li>
+                    </ul>
+
+                    <h3>Seasonal notes</h3>
+                    <p><strong>Spring:</strong> Mud, runoff, and slick morning ice in shaded areas.</p>
+                    <p><strong>Summer:</strong> Start early, watch for lightning, bring extra water.</p>
+                </section>
+
+                <section class="card">
+                    <h2>Suggest a trail / Report conditions</h2>
+
+                    <form id="reportForm" class="form" method="get" action="#">
+                        <label for="fullName">Full name</label>
+                        <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+
+                        <label for="type">Submission type</label>
+                        <select id="type" name="type" required>
+                            <option value="">Select one</option>
+                            <option value="Suggestion">Suggestion</option>
+                            <option value="Conditions Report">Conditions Report</option>
+                        </select>
+
+                        <label for="trailName">Trail name</label>
+                        <input id="trailName" name="trailName" type="text" required>
+
+                        <label for="details">Details</label>
+                        <textarea id="details" name="details" rows="5" required></textarea>
+
+                        <label class="checkline">
+                            <input id="agree" name="agree" type="checkbox" required>
+                            I understand TrailNest is informational and I am responsible for my own safety.
+                        </label>
+
+                        <button class="btn btn-primary" type="submit">Submit</button>
+
+                        <p id="formMsg" class="form-msg" aria-live="polite"></p>
+                    </form>
+                </section>
+            </div>
+
+            <section class="section">
+                <div class="card">
+                    <h2>Recent submissions (this browser)</h2>
+                    <p class="muted">Saved locally using localStorage.</p>
+                    <div id="recentReports"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p><small>&copy; <span id="year"></span> TrailNest</small></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

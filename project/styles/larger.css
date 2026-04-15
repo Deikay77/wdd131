@@ -1,0 +1,60 @@
+@media (min-width: 48rem) {
+    .menu-btn {
+        display: none;
+    }
+
+    .site-nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        gap: 0.35rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filters-grid {
+        grid-template-columns: repeat(6, 1fr);
+        align-items: end;
+    }
+
+    .filters-grid label:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    .filters-grid label:nth-child(2) {
+        grid-column: span 2;
+    }
+
+    .filters-grid label:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .filters-grid label:nth-child(4) {
+        grid-column: span 2;
+    }
+
+    .filters-grid label:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .filters-grid button {
+        grid-column: span 2;
+    }
+}
