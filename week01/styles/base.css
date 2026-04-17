@@ -1,0 +1,202 @@
+:root {
+    --blue: #1f5578;
+    --dark: #2f2f2f;
+    --light: #ffffff;
+    --page: #f2f2f2;
+    --border: #cfcfcf;
+
+    --heading: "Montserrat", system-ui, sans-serif;
+    --body: "Roboto", system-ui, sans-serif;
+
+    --maxw: 1050px;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body);
+    background: var(--page);
+    color: #111;
+}
+
+/* HEADER */
+#course-title {
+    display: block;
+    /* required */
+    text-align: center;
+    background: var(--blue);
+    color: #fff;
+    padding: 1rem;
+    font-family: var(--heading);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 1.2rem;
+}
+
+.site-nav {
+    display: flex;
+    /* required */
+    justify-content: space-around;
+    gap: 0.5rem;
+    background: var(--dark);
+}
+
+.site-nav a {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.85rem 0.5rem;
+    transition: background-color 150ms ease, color 150ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background: #444;
+    color: #fff;
+    outline: none;
+}
+
+/* MAIN */
+.page {
+    width: min(var(--maxw), 92vw);
+    /* required limited width centered */
+    margin: 0 auto;
+    padding: 1.5rem 0 2rem;
+}
+
+.student-name {
+    font-family: var(--heading);
+    text-align: center;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    margin: 1rem 0 1.5rem;
+}
+
+/* Cards grid required */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.card-title {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--heading);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* About Me top: text + image */
+.about-top {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.about-top p {
+    margin: 0;
+    line-height: 1.65;
+}
+
+.profile {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    justify-self: center;
+    border: 1px solid var(--border);
+}
+
+/* Place block */
+.place-heading {
+    text-align: center;
+    font-family: var(--heading);
+    margin: 0.5rem 1rem 0.25rem;
+}
+
+.rule {
+    width: 85%;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 0.5rem auto 1rem;
+}
+
+.place-block {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+    align-items: start;
+}
+
+.flag-figure {
+    margin: 0;
+    justify-self: center;
+    text-align: center;
+    color: #444;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.flag-figure img {
+    display: block;
+    width: 220px;
+    height: auto;
+    border: 1px solid var(--border);
+    background: #fff;
+    padding: 0.25rem;
+}
+
+.resources {
+    margin: 0;
+    padding: 1rem 1.25rem 1.25rem 2.25rem;
+    line-height: 1.9;
+}
+
+.resources a {
+    color: #1a4db3;
+}
+
+/* FOOTER */
+.site-footer {
+    text-align: center;
+    background: var(--blue);
+    color: #fff;
+    padding: 1rem;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+}
+
+/* Desktop layout (2 columns) */
+@media (min-width: 800px) {
+    .grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .about-top {
+        grid-template-columns: 1fr 220px;
+        align-items: start;
+    }
+
+    .profile {
+        justify-self: end;
+    }
+
+    .place-block {
+        grid-template-columns: 260px 1fr;
+    }
+}

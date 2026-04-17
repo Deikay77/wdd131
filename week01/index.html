@@ -1,82 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="WDD 131-Dynamic web Fundamentals. My name is Selorm Dei-Kumah">
-    <meta author="Selorm Dei-Kumah">
-       <link rel="stylesheet" href="styles/base.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-    <title>WDD 131 – Dynamic Web Fundamentals – Selorm Dei-Kumah</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Rubia M. Francesco</title>
 
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals – Rubia M. Francesco – course landing page with assignments, resources, and project links." />
+    <meta name="author" content="Rubia M. Francesco" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-   <header>
-<span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-   <nav>
-    <ul>
-      <li><a href="www.linkedin.com/in/selorm-dei-kumah-473279312">LinkedIn</a></li>  
-      <li><a href="https://byupw.instructure.com/.">Canvas</a></li>
-      <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng">Scripture</a></li>
-      <li><a href="">Final Project</a></li>
-    </ul>
-   </nav>
-   </header>
-   <main>
-    <h1>Selorm Dei-Kumah</h1>
+    <header class="site-header">
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
 
-    <section class="card">
-        <h2>About me</h2>
-        <div class="about-content">
-        <p>
-        My name is Selorm Dei-Kumah. I am a Telecommunications Engineering student
-        with an interest in technology, communication systems, and web development.
-        I enjoy learning new things and building practical projects that solve real problems.
-        </p> 
-       
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">I‑Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank"
+                rel="noopener">Scripture</a>
+            <a href="project/" aria-label="Final Project Folder">Final Project</a>
+        </nav>
+    </header>
 
-        <img src="" alt="Potrait of Selorm Dei-Kumah">
+    <main class="page">
+        <h1 class="student-name">Selorm Dei-Kumah</h1>
 
-        </div>
-       
-        <h3>Accra, Ghana</h3>
-        <div class="country">
-            <figure>
-            <img src="images/ghana flag.webp" alt="Official flag of Ghana">
-            <figcaption>Official flag of Ghana</figcaption>
-            </figure>
-            <p>
-                Ghana is a country in West Africa known for its rich culture, hospitality,
-                and historical significance. It has a growing technology sector and is home
-                to many educational and engineering opportunities.
-            </p>
-        </div>
-    </section>
+        <section class="grid">
+            <!-- LEFT CARD -->
+            <section class="card">
+                <h2 class="card-title">About Me</h2>
 
-    <section class="card">
-        <h2>Web Dev Resources</h2>
-        <ul class="resouces">
-            <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
-            <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
-            <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
-            <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
-            <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
-            <li><a href="https://placehold.co" target="_blank">Image Placeholder</a></li>
-        </ul>
-       
-    </section>
+                <div class="about-top">
+                    <p>
+                        My name is Selorm and I go by Sel. I live in Ghana. I am currently improving my skills in
+                        HTML, CSS, and JavaScript through WDD 131. I enjoy learning new things and building projects
+                        that are clean, responsive, and easy to use.
+                    </p>
 
-   </main>
-   <footer>
-    <p>
-        <span id="currentyear"></span> 🌺Selorm Dei-Kumah 🌺 Ghana
-    </p>
-    <p id="lastmodified"></p>
-   </footer> 
+                    <img class="profile" src="images/ghana flag.webp" alt="Portrait of Rubia M. Francesco" width="280"
+                        height="350" loading="lazy" />
+                </div>
+
+                <h3 class="place-heading">Ghana</h3>
+                <hr class="rule" />
+
+                <div class="place-block">
+                    <figure class="flag-figure">
+                        <img src="images/flag-ghana.webp" alt="Flag of Ghana" width="220" height="140" loading="lazy" />
+                        <figcaption>Official Flag of Ghana</figcaption>
+                    </figure>
+
+                    <p>
+                        Ghana is a West African country known for its rich culture, hospitality, and history.
+                        It is famous for landmarks such as Cape Coast Castle, Kakum National Park, and Independence
+                        Square in Accra. Ghana’s economy includes cocoa and gold production, and its many festivals,
+                        music, and food make it a vibrant place to live and visit.
+                    </p>
+                </div>
+            </section>
+
+            <!-- RIGHT CARD -->
+            <section class="card">
+                <h2 class="card-title">Web Dev Resources</h2>
+
+                <ul class="resources">
+                    <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a>
+                    </li>
+                    <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a></li>
+                    <li><a href="https://picsum.photos/" target="_blank" rel="noopener">Lorem Picsum Image
+                            Placeholder</a></li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> Selorm Dei-Kumah | Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
