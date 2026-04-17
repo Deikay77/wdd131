@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Country page for Ghana featuring key data and weather." />
-    <title>Ghana</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Ghana place page (WDD 131) featuring key data and a weather section with wind chill." />
+    <meta name="author" content="Selorm Dei-Kumah" />
+    <title>Ghana | Place Page</title>
 
     <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/place.js" defer></script>
@@ -19,23 +21,24 @@
     <div class="accent-bar" aria-hidden="true"></div>
 
     <main class="page">
-        <!-- HERO block -->
-        <section class="hero" aria-label="Hero image of Ghana">
-            <!-- REQUIRED: srcset method swapping WebP images -->
-            <img class="hero-img" src="images/accra-800.webp" srcset="
-          images/accra-400.webp 400w,
-          images/accra-800.webp 800w,
-          images/accra-1200.webp 1200w
-        " sizes="(max-width: 500px) 400px, (max-width: 900px) 800px, 1200px" alt="Accra city view in Ghana"
+        <!-- HERO / Layout container -->
+        <section class="hero" aria-label="Ghana hero section">
+            <!-- REQUIRED: srcset responsive method + WebP images -->
+            <img class="hero-img" src="images/hero-1200.webp" srcset="
+          images/hero-400.webp 400w,
+          images/hero-800.webp 800w,
+          images/hero-1200.webp 1200w
+        " sizes="(max-width: 500px) 400px, (max-width: 900px) 800px, 1200px" alt="A scenic view representing Ghana"
                 width="1200" height="700" loading="eager" />
 
-            <!-- Desktop overlay cards / Mobile stacked cards -->
+            <!-- DATA card -->
             <section class="card data" aria-label="Ghana data">
                 <h2 class="card-title">Data</h2>
+
                 <dl class="kv">
                     <div>
                         <dt>Area</dt>
-                        <dd>238,535 sq km</dd>
+                        <dd>238,535 km²</dd>
                     </div>
                     <div>
                         <dt>Population</dt>
@@ -51,7 +54,7 @@
                     </div>
                     <div>
                         <dt>Currency</dt>
-                        <dd>Ghanaian Cedi</dd>
+                        <dd>Ghanaian Cedi (GHS)</dd>
                     </div>
                     <div>
                         <dt>Time Zone</dt>
@@ -68,18 +71,23 @@
                 </dl>
             </section>
 
+            <!-- WEATHER card -->
             <section class="card weather" aria-label="Ghana weather">
                 <h2 class="card-title weather-title">Weather</h2>
 
-                <!-- SVG icon required for mobile view -->
-                <img class="weather-icon" src="images/weather-icon.svg" alt="Weather icon" width="56" height="56"
-                    loading="lazy" />
+                <!-- REQUIRED: SVG icon for mobile view -->
+                <img class="weather-icon" src="images/weather-icon.svg" alt="Partly cloudy weather icon" width="56"
+                    height="56" loading="lazy" />
 
-                <!-- Static values (JS reads these) -->
+                <!-- Static displayed values (JS uses these) -->
                 <dl class="kv">
                     <div>
                         <dt>Temperature</dt>
                         <dd><span id="temperature">10</span> °C</dd>
+                    </div>
+                    <div>
+                        <dt>Conditions</dt>
+                        <dd>Partly Cloudy</dd>
                     </div>
                     <div>
                         <dt>Wind</dt>
@@ -95,8 +103,8 @@
     </main>
 
     <footer class="site-footer">
-        <p>© <span id="year"></span> Rubia Magdelena Francesco | Ghana</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> Rubia M. Francesco | Ghana</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 

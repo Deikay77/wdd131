@@ -1,77 +1,72 @@
-:root{
-  /* Ghana palette (you can tweak) */
+:root {
+  /* Ghana-inspired colors */
   --red: #ce1126;
   --yellow: #fcd116;
   --green: #006b3f;
 
-  --page-bg: #e9f7ea;      /* light green page background like the example */
+  --page-bg: #eaf7ea;
   --ink: #0f172a;
 
-  --card-bg: rgba(255,255,255,0.85);
-  --card-border: rgba(15,23,42,0.18);
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: rgba(15, 23, 42, 0.18);
 
   --radius: 10px;
-  --shadow: 0 10px 25px rgba(0,0,0,0.18);
-
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
   --maxw: 1000px;
 }
 
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body{
+body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--page-bg);
   color: var(--ink);
 }
 
-/* Header + Footer like the example */
-.site-header{
+/* Header (similar style to example) */
+.site-header {
   background: var(--red);
   color: #fff;
   text-align: center;
   padding: 1.5rem 1rem;
 }
 
-.site-header h1{
+.site-header h1 {
   margin: 0;
   font-size: clamp(2rem, 5vw, 3.2rem);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
-.accent-bar{
+.accent-bar {
   height: 14px;
   background: var(--green);
 }
 
-.site-footer{
-  background: var(--red);
-  color: #fff;
-  text-align: center;
-  padding: 1.25rem 1rem;
-}
-
-.page{
+/* Centered page width like the example screenshot */
+.page {
   width: min(var(--maxw), 92vw);
   margin: 0 auto;
   padding: 1.25rem 0 1.5rem;
 }
 
-/* HERO */
-.hero{
+/* HERO block */
+.hero {
   position: relative;
-  border: 6px solid rgba(0,0,0,0.15);
+  border: 6px solid rgba(0, 0, 0, 0.15);
   background: #fff;
 }
 
-.hero-img{
+.hero-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Cards (base) */
-.card{
+/* Cards */
+.card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
@@ -79,7 +74,7 @@ body{
   overflow: hidden;
 }
 
-.card-title{
+.card-title {
   margin: 0;
   padding: 0.9rem 1rem;
   background: var(--green);
@@ -87,83 +82,96 @@ body{
   font-size: 1.4rem;
 }
 
-.kv{
+/* key-value layout */
+.kv {
   margin: 0;
   padding: 1rem;
   display: grid;
   gap: 0.45rem;
 }
 
-.kv > div{
+.kv>div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
   align-items: baseline;
 }
 
-.kv dt{
+.kv dt {
   font-weight: 700;
 }
 
-.kv dd{
+.kv dd {
   margin: 0;
-  justify-self: start;
 }
 
-/* Weather icon shown on mobile */
-.weather-icon{
+/* Mobile: show SVG icon */
+.weather-icon {
   display: block;
   margin: 0.75rem 1rem 0;
 }
 
-/* MOBILE layout (wireframe): image, then Data card, then Weather card */
-@media (max-width: 799px){
-  .hero{
+/* MOBILE layout (wireframe): image then Data then Weather */
+@media (max-width: 799px) {
+  .hero {
     display: grid;
     gap: 1rem;
     padding-bottom: 1rem;
   }
 
-  .data, .weather{
-    width: min(92vw, var(--maxw));
+  .data,
+  .weather {
+    width: min(var(--maxw), 92vw);
     margin: 0 auto;
   }
 }
 
-/* DESKTOP layout (example): overlay Data left + Weather right over the image */
-@media (min-width: 800px){
-  .hero{
-    height: min(70vh, 560px);  /* prevents huge white space / scrolling */
+/* DESKTOP layout (wireframe): overlay Data left, Weather right */
+@media (min-width: 800px) {
+  .hero {
+    height: min(70vh, 560px);
     overflow: hidden;
   }
 
-  .hero-img{
+  .hero-img {
     height: 100%;
     object-fit: cover;
   }
 
-  .data{
+  .data {
     position: absolute;
     top: 1.25rem;
     left: 1.25rem;
     width: min(380px, 38%);
   }
 
-  .weather{
+  .weather {
     position: absolute;
     right: 1.25rem;
     bottom: 1.25rem;
     width: min(360px, 36%);
   }
 
-  /* REQUIRED: pseudo-element (emoticon) after Weather heading in large view */
-  .weather-title::after{
+  /* REQUIRED: pseudo-element after Weather heading in large view */
+  .weather-title::after {
     content: " ⛅";
     font-size: 1.2em;
   }
 
   /* REQUIRED: SVG icon only in mobile view */
-  .weather-icon{
+  .weather-icon {
     display: none;
   }
+}
+
+/* Footer */
+.site-footer {
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
 }
